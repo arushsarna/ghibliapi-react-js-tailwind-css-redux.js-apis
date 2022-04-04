@@ -14,8 +14,7 @@ ReactDOM.render(
     <Provider store={store}>
       <Routes>
         <Route path="/" element={<App />} />
-
-        <Route path="page" element={<Page />} />
+        <Route path="/:id" element={<Page />} />
       </Routes>
     </Provider>
   </BrowserRouter>,

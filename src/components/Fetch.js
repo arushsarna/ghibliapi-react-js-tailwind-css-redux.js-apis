@@ -28,11 +28,11 @@ export default function Fetch() {
           {data.map((curElem, key) => {
             return (
               <div className=" hover:mt-3  rounded-3xl h-full flex justify-center mt-5 items-center">
-                <Link to="/page">
+                <Link to={curElem.id}>
                   <img
-                    onClick={() => {
-                      dispatch(actionCreators.setId(curElem.id));
-                    }}
+                    // onClick={() => {
+                    //   dispatch(actionCreators.setId(curElem.id));
+                    // }}
                     className=" rounded-3xl border-4  border-[#261B3E]  h-80  "
                     src={curElem.image}
                     alt=""

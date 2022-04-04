@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import NavBar from "./NavBar";
 
 import { useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
 export default function Page() {
+  const { id } = useParams();
   const [data, setData] = useState([]);
   //  const id = "2baf70d1-42bb-4437-b551-e5fed5a87abe";
   const getData = async () => {
@@ -12,7 +14,7 @@ export default function Page() {
   useEffect(() => {
     getData();
   }, []);
-  const id = useSelector((state) => state.id);
+  // const id = useSelector((state) => state.id);
   return (
     <div>
       <div className=" bg-[#261B3E] flex  w-screen h-full ">
